@@ -9,9 +9,9 @@ public class GDP extends ArrayList<GDP>
     private static AtomicLong counter = new AtomicLong();
     private long id;
     private String name;
-    private String gdp;
+    private long gdp;
 
-    public GDP(String name, String gdp)
+    public GDP(String name, long gdp)
     {
         this.id = counter.incrementAndGet();
         this.name = name;
@@ -37,12 +37,12 @@ public class GDP extends ArrayList<GDP>
         this.name = name;
     }
 
-    public String getGdp()
+    public long getGdp()
     {
         return gdp;
     }
 
-    public void setGdp(String gdp)
+    public void setGdp(long gdp)
     {
         this.gdp = gdp;
     }

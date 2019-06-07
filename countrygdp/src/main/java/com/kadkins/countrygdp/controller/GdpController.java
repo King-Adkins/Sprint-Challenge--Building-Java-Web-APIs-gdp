@@ -47,9 +47,9 @@ public class GdpController
     }
 
     @GetMapping(value = "/gdp/economy")
-    public ResponseEntity<?> getGDPSLowtoHigh(@PathVariable int length) {
-        ArrayList<GDP> gdps = CountrygdpApplication.ourGdpList.findGDP(e -> (e.getGdp().length() > length));
-        gdps.sort((e1, e2) -> e1.getGdp().compareToIgnoreCase(e2.getGdp()));
+    public ResponseEntity<?> getGDPSLowtoHigh(@PathVariable("GDP") long gdp) {
+        ArrayList<GDP> gdps = CountrygdpApplication.ourGdpList.findGDP(e -> (e.getGdp() == gdp));
+
         return new ResponseEntity<>(gdps, HttpStatus.OK);
     }
 }
