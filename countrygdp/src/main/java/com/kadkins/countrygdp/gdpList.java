@@ -112,7 +112,7 @@ public class gdpList
         gdpList.add(new GDP("Sudan","33249"));
     }
 
-    public GDP findGDP (CheckGdp tester) {
+    public GDP findGDP (CheckGDP tester) {
         for (GDP c:gdpList) {
             if (tester.test(c)) {
                 return c;
